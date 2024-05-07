@@ -8,6 +8,39 @@ class CubitCounterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cubit Counter'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.refresh),
+          )
+        ],
+      ),
+      body: const Center(
+        child: Text(
+          'Counter value: X',
+        ),
+      ),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            heroTag: '3',
+            child: const Text('+3'),
+          ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+            onPressed: () {},
+            heroTag: '2',
+            child: const Text('+2'),
+          ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+            onPressed: () {},
+            heroTag: '1',
+            child: const Text('+1'),
+          ),
+        ],
       ),
     );
   }
