@@ -37,9 +37,11 @@ class _CubitCounterView extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: BlocBuilder<CounterCubit, CounterState>(
-          builder: (context, state) => Text('Counter value: ${state.counter}'),
-        ),
+        child: context.select((CounterCubit value) =>
+            Text('Counter value: ${value.state.counter}')),
+        // child: BlocBuilder<CounterCubit, CounterState>(
+        //   builder: (context, state) => Text('Counter value: ${state.counter}'),
+        // ),
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
