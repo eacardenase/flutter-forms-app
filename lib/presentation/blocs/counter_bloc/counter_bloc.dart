@@ -22,4 +22,12 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
       counter: 0,
     ));
   }
+
+  void increaseCounterBy([int value = 1]) {
+    add(CounterIncreased(value));
+  }
+
+  void resetCounter() {
+    add(const CounterReset());
+  }
 }
